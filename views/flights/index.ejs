@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') %>
+
+  <section>
+    <h1>All Flights</h1>
+
+    <% if(flights) { %>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Airline </th>
+            <th>Airport </th>
+            <th>FlightNo </th>
+            <th>Departure </th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% flights.forEach(function(flight){ %>
+            <tr class="<%= flight.class %>">
+              <td>
+                <%= flight.airline %>
+              </td>
+              <td>
+                <%= flight.airport %>
+              </td>
+              <td>
+                <%= flight.flightNo %>
+              </td>
+              <td>
+                <%= flight.departs %>
+              </td>
+              <td><a href="/flights/<%=flight._id%>">Details</a></td>
+              <td>
+                <form action="/flights/<%=flight._id%>?_method=DELETE" method="POST">
+                  <button type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <% } else { %>
+        <h1>No Flights</h1>
+      <% } %>
+
+  </section>
+
+  <%- include('../partials/footer.ejs') %>

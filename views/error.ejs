@@ -1,0 +1,9 @@
+<%- include('./partials/header.ejs') %>
+<section>
+  <h1><%= message %></h1>
+  <button onclick=history.back()>Go Back</button>
+  <button onclick="['a', 'b'].forEach((el)=>console.log(el))">Test</button>
+  <!-- <a href="javascript: history.go(-1)">Go Back</a> -->
+</section>
+<%- include('./partials/footer.ejs') %>
+

@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(217, 246, 255);
+  background-image: url("data:image/svg+xml,<svg width='1800px' height='150px' xmlns='http://www.w3.org/2000/svg'><text x='0' y='130px' font-size='100px' clip-path='url(%23emojiClipPath)'>:memo:/text></svg>");
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.red{
+  color: red;
+}
+
+th, td {
+  border: 1px solid grey;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+input, select {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

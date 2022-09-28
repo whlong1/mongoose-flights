@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs') %>
+
+  <section>
+    <h1>Add a Flight</h1>
+
+    <form style="display: flex; flex-direction: column;" class="flight-form" action="/flights" method="POST">
+
+      <label>Airline:</label>
+      <select name="airline">
+        <option value="American">American</option>
+        <option value="Southwest">South West</option>
+        <option value="United">United</option>
+      </select>
+
+      <label>Airport:</label>
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option selected value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </select>
+
+      <label>Flight Number:</label>
+      <input type="number" min="10" max="9999" type="number" name="flightNo" autocomplete="off">
+
+      <span style="margin-top: 10px;">Departure:</span>
+      <input required type="datetime-local" name="departs" value="<%= flightDate %>">
+
+      <button style="margin-top: 10px; padding: 5px;" type="submit">Book Flight</button>
+
+    </form>
+
+  </section>
+
+  <%- include('../partials/footer.ejs') %>

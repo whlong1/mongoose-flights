@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+
+  <section>
+    <h1>Add Meal</h1>
+
+    <% if (err) { %>
+      <p>Error</p>
+      <p><%= err %></p>
+    <% } %>
+
+    <form action="/meals" method="POST"> 
+      <label>Name:</label>
+      <input type="text" required name="name" autocomplete="off">
+      <button style="margin-top: 10px; padding: 5px;" type="submit">Submit</button>
+    </form>
+
+    <div>
+      <h1>Existing Meals:</h1>
+      <% if (meals) { %>
+        <select>
+            <% meals.forEach(function(meal) { %>
+                <option><%= meal.name %></option>
+            <% }) %>
+        </select>
+      <% } %>
+    </div>
+
+  </section>
+
+  <%- include('../partials/footer.ejs') %>
